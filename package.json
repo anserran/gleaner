@@ -1,0 +1,17 @@
+{
+  "name": "gleaner-collector-frontend",
+  "preferGlobal": "false",
+  "version": "0.0.1",
+  "author": "anserran <angelserranolaguna@gmail.com>",
+  "description": "Frontend for gleaner collector",
+  "dependencies": {
+    "express": "3.x",
+    "ejs": "*",
+    "mongodb": "1.3.x",
+    "crypto": "0.0.3",
+    "async": "0.2.x",
+    "jshashes": "1.0.x",
+    "q": "*",
+    "supertest": "*"
+  }
+}
