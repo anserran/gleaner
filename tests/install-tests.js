@@ -6,8 +6,8 @@ module.exports = {
 	testInstall: function(test) {
 		test.expect(1);
 		var config = {
-			dbHost: 'localhost',
-			dbPort: 27017,
+			mongoHost: 'localhost',
+			mongoPort: 27017,
 			dbName: 'test'
 		};
 

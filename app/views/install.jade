@@ -1,0 +1,61 @@
+extends layout
+
+block body
+	div.install-container.col-xs-12.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+		h1 GLEANER Installer
+		form#install.form-horizontal(role='form')
+			div.form-group
+				p.setting.admin-settings Admin Settings
+					span.glyphicon
+			div.form-group
+				label.col-sm-2.control-label(for='adminUser') User
+				div.col-sm-10
+					input#adminUser.form-control(name='adminUser', type='text', placeholder='Enter admin user name')
+			div.form-group
+				label.col-sm-2.control-label(for='adminPassword') Password
+				div.col-sm-10
+					input#adminPassword.form-control(name='adminPassword',type='password', placeholder='Enter admin user password')
+			div.form-group
+				label.col-sm-2.control-label(for='salt') Salt
+				div.col-sm-10
+					input#salt.form-control(name='salt', type='text', placeholder='Random string to generate secure keys in gleaner')
+			div.form-group
+				p.setting.mongo-settings Mongodb Settings
+					span.glyphicon.ajax-loading
+			div.form-group
+				label.col-sm-2.control-label(for='mongoHost') Host
+				div.col-sm-10
+					input#mongoHost.form-control(name='mongoHost',type='text', placeholder='Enter mongodb host (e.g., "localhost")', value='localhost')
+			div.form-group
+				label.col-sm-2.control-label(for='mongoPort') Port
+				div.col-sm-10
+					input#mongoPort.form-control(name='mongoPort',type='text', placeholder='Enter mongodb port', value='27017')
+			div.form-group
+				label.col-sm-2.control-label(for='dbName') DB Name
+				div.col-sm-10
+					input#dbName.form-control(name='dbName',type='text', placeholder='Enter database name', value='gleaner')
+			div.form-group
+				p.setting.redis-settings Redis Settings
+					span.glyphicon.ajax-loading
+			div.form-group
+				label.col-sm-2.control-label(for='redisHost') Host
+				div.col-sm-10
+					input#redisHost.form-control(name='redisHost',type='text', placeholder='Enter mongodb host (e.g., "localhost")', value='localhost')
+			div.form-group
+				label.col-sm-2.control-label(for='redisPort') Port
+				div.col-sm-10
+					input#redisPort.form-control(name='redisPort',type='text', placeholder='Enter mongodb port', value='6379')
+			div.form-group
+				label.col-sm-2.control-label(for='dbIndex') DB Index
+				div.col-sm-10
+					input#dbIndex.form-control(name='dbIndex',type='text', placeholder='Enter redis database index (e.g., 0, 1, 2, ...)', value='0')
+			div.form-group
+				button.btn.btn-primary.col-sm-2.col-sm-offset-9(type='submit') Install
+		form#result.gone
+			p Installed!
+			p
+				a.btn.btn-primary(href='/login') Login
+
+block scripts
+	script(src='js/install.js')
+

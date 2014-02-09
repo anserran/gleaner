@@ -1,8 +1,0 @@
-module.exports = {
-	// User name for the administrator
-	adminUser: '',
-	// Password for the admnistrator
-	adminPassword: '',
-	// Port to run the installer
-	port: 80
-};

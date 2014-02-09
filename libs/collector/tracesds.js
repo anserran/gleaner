@@ -4,11 +4,11 @@ var TracesDataStore = function(config, db) {
 	var auth = require('./authenticators');
 	var HttpError = require('../app/httperror');
 
-	if (!config.gamePlaySalt) {
-		console.log('gamePlaySalt should be defined in the configuration file');
+	if (!config.salt) {
+		console.log('salt should be defined in the configuration file');
 	}
 
-	var gamePlaySalt = config.gamePlaySalt || 'gameplaysalt';
+	var salt = config.salt || 'gameplaysalt';
 
 	var startGamePlay = function(req) {
 		var gameInstanceToken = req.params && req.params.gameInstanceToken ? req.params.gameInstanceToken : null;
@@ -41,7 +41,7 @@ var TracesDataStore = function(config, db) {
 								}).then(
 									function(activeGamePlay) {
 										// Generate the game play token. Clients will set this as it authorization header
-										var gamePlayToken = SHA1.b64(new Date().toString() + ':' + playerId + ":" + gamePlaySalt + ":" + Math.random());
+										var gamePlayToken = SHA1.b64(new Date().toString() + ':' + playerId + ":" + salt + ":" + Math.random());
 										// Update active game play
 										if (activeGamePlay) {
 											return db.activegameplays().update({

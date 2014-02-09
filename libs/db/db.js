@@ -112,7 +112,7 @@ var DB = function(config) {
 		Server = require('mongodb').Server;
 
 	// Set up the connection to the local db
-	var mongoclient = new MongoClient(new Server(config.dbHost, config.dbPort, {
+	var mongoclient = new MongoClient(new Server(config.mongoHost, config.mongoPort, {
 		native_parser: true
 	}));
 

@@ -2,7 +2,7 @@
  * Class in charge of processing all requests sending traces.
  * Configuration must be in the form:
  * {
- *		gamePlaySalt: 'game-play-salt' // Salt to generate game play tokens
+ *		salt: 'game-play-salt' // Salt to generate game play tokens
  * }
  *
  * @class GleanerCollector

@@ -1,10 +1,7 @@
-console.log('Starting gleaner...');
-var config = require('../configs/config');
+var app = require('../app/app');
+var http = require('http');
 
-require('../libs/app/app')(config, function( err, app ){
-	console.log('Starting server...');
-	if ( err ) console.log(err.stack);
-	app.listen(config.port, function() {
-		console.log('Server listening in localhost:' + config.port);
-	});
+/* Start server */
+http.createServer(app).listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + app.get('port'));
 });

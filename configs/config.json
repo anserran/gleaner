@@ -1,0 +1,1 @@
+{"salt":"admin","mongoHost":"localhost","mongoPort":"27017","dbName":"gleaner","redisHost":"localhost","redisPort":"6379","dbIndex":"0"}

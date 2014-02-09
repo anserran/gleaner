@@ -2,8 +2,8 @@ var db;
 var collector;
 var Q = require('q');
 var config = {
-	dbHost: 'localhost',
-	dbPort: 27017,
+	mongoHost: 'localhost',
+	mongoPort: 27017,
 	dbName: 'test'
 };
 Q.longStackSupport = true;

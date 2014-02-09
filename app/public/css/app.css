@@ -1,0 +1,33 @@
+/* app css stylesheet */
+
+.install-container {
+  margin-top: 20px;
+  border: 1px solid #D5D5D5;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.setting {
+  font-size: 13px;
+  font-weight: 700;
+  color: #A5A5A5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 15px;
+}
+
+.green {
+  color: #00FF00;
+}
+
+.red {
+  color: #FF0000;
+}
+
+.gone {
+  display: none;
+}
+
+.ajax-loading {
+  content: url(../images/ajax-loader.gif);
+}

@@ -1,14 +1,18 @@
 module.exports = {
 	// Port to run the app
 	port: 3000,
-	// Salt for user session generation
+	// Salt to generate different hashes in gleaner
 	salt: 'yoursalthereplease',
-	// Salt for game play token generation
-	gamePlaySalt: 'gamePlaySalt',
-	// Host of mongodb
-	dbHost: 'localhost',
-	// Port for mongodb
-	dbPort: 27017,
-	// Name of gleaner database
-	dbName: 'gleaner-xml'
+	// Mongodb host
+	mongoHost: 'localhost',
+	// Mongodb port
+	mongoPort: 27017,
+	// Name of the mongo db database
+	dbName: 'gleaner',
+	// Redis host
+	redisHost: 'localhost',
+	// Redis port
+	redisPort: 6379,
+	// Redis database index
+	dbIndex: 0
 };
